@@ -1,0 +1,224 @@
+﻿
+body {
+    background: #F7F7F7;
+}
+
+.wr {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-right: solid 1px #cccccc;
+    overflow: auto;
+    width: 70px;
+    box-shadow: 0px 0px 15px #dadada;
+    z-index : 1; 
+    background: #F7F7F7;
+}
+
+    #menu.open {
+        width: 270px;
+        animation: menuOpenMenu 1.2s;
+    }
+
+    #menu #title {
+        padding: 10px;
+        border-bottom: solid 1px #dadada;
+        position: relative;
+    }
+
+        #menu #title h3 {
+            font-size: 18px;
+            margin: 9px 0px;
+        }
+
+        #menu #title #menu-close {
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            top: 0;
+            padding: 19px 14px;
+        }
+
+        #menu #title #menu-open {
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            top: 0;
+            padding: 19px 14px;
+        }
+
+    #menu #tree {
+        list-style: none;
+        margin-top: 20px;
+    }
+
+        #menu #tree .li-body {
+            padding: 5px 10px;
+            font-size:initial;
+        }
+
+        #menu #tree .li-body i {
+            padding: 5px 10px;
+            font-size:25px;
+        }
+
+        #menu #tree a {
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+            #menu #tree a:hover {
+                background: #f0f0f0;
+            }
+
+    #menu ul ul .li-body {
+        padding-left: 20px !important;
+    }
+
+#titlespan {
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 21px;
+    /* margin-top: 12px; */
+    color: #737373;
+    padding-left: 10px;
+    margin-left: 6px;
+}
+
+
+#body {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    right: 0px;
+    bottom: 0;
+    overflow: auto;
+}
+
+    #body.open {
+        left: 270px;
+        animation: bodyOpenMenu 1.2s;
+    }
+
+.content {
+    background: #fff;
+    border: solid 1px #D4D4D4;
+}
+
+.actions {
+    text-align: right;
+}
+
+.table-nowr td {
+    white-space: nowrap;
+}
+
+
+.onoffswitch {
+    position: relative;
+    width: 150px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 30px;
+        padding: 0;
+        line-height: 30px;
+        font-size: 14px;
+        color: white;
+        font-family: Trebuchet, Arial, sans-serif;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+
+    .onoffswitch-inner:before {
+        content: "Activo";
+        padding-left: 10px;
+        background-color: #34A7C1;
+        color: #FFFFFF;
+    }
+
+    .onoffswitch-inner:after {
+        content: "Inactivo";
+        padding-right: 50px;
+        background-color: #EEEEEE;
+        color: #ff0000;
+        text-align: right;
+    }
+
+.onoffswitch-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 115px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+
+@keyframes menuOpenMenu {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 280px;
+    }
+}
+
+@keyframes bodyOpenMenu {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 281px;
+    }
+}

@@ -1,0 +1,51 @@
+﻿
+
+
+<div class="pad">
+    <div class="content">
+        <div class="pad">
+            <div class="row" ng-init="showing = false">
+                <div ng-class="(showing) ? 'col-md-6 col-xs-6':'col-md-10 col-xs-10'">
+                    <a class="btn btn-success" ng-click="Importar()"><i class="fa fa-plus"></i>&nbsp;Subir Archivo</a>
+                    
+                    <br />
+                    <br />
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <i class="fa fa-user"></i>   Listado Animales
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <!-- class="table table-hover"-->
+                                <thead>
+                                    <tr>
+                                        <th ng-click="order.arrange('Nombre')"><i class="fa fa-sort-{{(order.reverse) ? 'desc':'asc'}}" ng-if="order.orderProp == 'Nombre'"></i>Nombre</th>
+                                        <th ng-click="order.arrange('Tipo')"><i class="fa fa-sort-{{(order.reverse) ? 'desc':'asc'}}" ng-if="order.orderProp == 'Tipo'"></i>Tipo Animal</th>
+                                      
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th><input class="form-control" ng-model="filter.Nombre" /></th>
+                                        <th><input class="form-control" ng-model="filter.Tipo" /></th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="u in ANIMALES | orderBy : order.orderProp : order.reverse | filter : filter" id="tablaAnimales">
+                                    <tr id="{{u.ID}}" style="cursor: pointer;">
+
+                                        <td>{{u.Nombre}}</td>
+                                        <td>{{u.Tipo}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+             
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,44 @@
+﻿* {
+    margin:0;
+    padding:0;
+}
+.pad {
+    padding:10px;
+}
+.padt {
+    padding-top:10px;
+}
+.padr {
+    padding-right:10px;
+}
+.padb {
+    padding-bottom:10px;
+}
+.padl {
+    padding-left:10px;
+}
+.mart {
+    margin-top:10px;
+}
+.marr {
+    margin-right:10px;
+}
+.marb {
+    margin-bottom:10px;
+}
+.marl {
+    margin-left:10px;
+}
+.par {
+    display:inline-block;
+    vertical-align:top;
+}
+.center {
+    text-align:center;
+}
+.floatr {
+    float:right;
+}
+.floatl {
+    float:left;
+}
